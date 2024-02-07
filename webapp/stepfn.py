@@ -5,10 +5,10 @@ import time
 import uuid
 
 
-aws_region = os.getenv('AWS_REGION', 'us-west-2')
+aws_region = os.environ["AWS_DEFAULT_REGION"] = "us-west-2"
 
-sfn_client = boto3.client("stepfunctions", region_name=aws_region)
-sts_client = boto3.client("sts", region_name=aws_region)
+sfn_client = boto3.client(service_name="stepfunctions", region_name=aws_region)
+sts_client = boto3.client(service_name="sts", region_name=aws_region)
 
 default_region = boto3.session.Session().region_name
 
