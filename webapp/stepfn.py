@@ -6,8 +6,8 @@ import uuid
 
 sfn_client = boto3.client("stepfunctions")
 sts_client = boto3.client("sts")
-default_region = boto3.session.Session().region_name
-
+# default_region = boto3.session.Session().region_name
+default_region = "us-west-2"
 
 # Methods for displaying the state machine's execution history
 def find_task_id(event, events_by_id):
