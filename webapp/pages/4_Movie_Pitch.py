@@ -83,7 +83,7 @@ with behind_the_scenes_col:
         display_no_state_machine_status()
 
     st.subheader("🔍 Step Functions state machine")
-    st.image(image="/app/pages/workflow_images/movie_pitch.png")
+    #st.image(image="/app/pages/workflow_images/movie_pitch.png")
 
 with demo_col:
     st.subheader("🚀 Demo")
