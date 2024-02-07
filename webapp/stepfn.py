@@ -4,7 +4,7 @@ import time
 import uuid
 
 
-aws_region = "us-east-1"  # Change this to your desired AWS region
+aws_region = "us-west-2"  # Change this to your desired AWS region
 
 sfn_client = boto3.client("stepfunctions", region_name=aws_region)
 sts_client = boto3.client("sts", region_name=aws_region)
