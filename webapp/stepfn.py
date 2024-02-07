@@ -4,10 +4,13 @@ import time
 import uuid
 
 
-sfn_client = boto3.client("stepfunctions")
-sts_client = boto3.client("sts")
-# default_region = boto3.session.Session().region_name
-default_region = "us-west-2"
+aws_region = "us-east-1"  # Change this to your desired AWS region
+
+sfn_client = boto3.client("stepfunctions", region_name=aws_region)
+sts_client = boto3.client("sts", region_name=aws_region)
+
+default_region = boto3.session.Session().region_name
+
 
 # Methods for displaying the state machine's execution history
 def find_task_id(event, events_by_id):
